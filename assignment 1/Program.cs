@@ -46,8 +46,39 @@
             Console.WriteLine($"HUNGER: {Hunger}/10 \n HAPPINESS: {Happiness}/10 \n HEALTH: {Health}/10");
         }
 
-        public void 
+        public void PassTime()
+        { 
+            Hunger=Math.Min(10, Hunger +2);
+            Happiness=Math.Max(1, Happiness -2);
+        }
+
+        public void CheckStats()
+        {
+            if (Hunger >= 8 ) 
+            {
+                Console.WriteLine($"{Name} is Hungry");
+            }
+            if ( Health <= 2 )
+            {
+                Console.WriteLine($"{Name} needs to rest");
+            }
+            if( Happiness <= 3 )
+            {
+                Console.WriteLine($"{Name} is unhappy!!");
+            }
+            if (Hunger == 10)
+            {
+                Health=Math.Min (0, Health -2);
+                Console.WriteLine($"Starving! Starving! \n Health is reducing !");
+            }
+            if(Happiness == 0)
+            {
+                Health = Math.Max(0, Health - 2);
+                Console.WriteLine($"Bored! Bored! \n Health is reducing !");
+            }
+        }
     }
+    
     class Game
     {
         static void Main(string[] args)
@@ -62,7 +93,11 @@
 
             Console.WriteLine($"Welcome, {myPet.Name} the {myPet.Type}!");
 
-
+            while(true)
+            { 
+                myPet.SeeStats();
+                Console.WriteLine($"");
+            }
 
         }
     }
