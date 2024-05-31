@@ -19,8 +19,8 @@
         }
         public void Eat()
         {
-            Hunger = Math.Max(0, Hunger -2);
-            Health = Math.Min(10, Health +1);  
+            Hunger = Math.Max(0, Hunger -3);
+            Health = Math.Min(10, Health +3);  
             Console.WriteLine($"Thank you! , That was yummy.\n{Name}'s hunger has reduced.\nHealth Boost +1 ");
         }
         public void Play()
@@ -30,13 +30,13 @@
                 Console.WriteLine($"{Name} is too hungry to play");
             }
             Happiness= Math.Min(10, Happiness +3);
-            Hunger = Math.Min(10, Hunger +2);
+            Hunger = Math.Min(10, Hunger +1);
             Console.WriteLine($"That was fun! Snack time ?\n {Name}'s happiness has increased, but so has hunger. ");
         }
         public void Rest()
         {
             Health = Math.Min (10, Health +3);
-            Happiness = Math.Max (0, Happiness -2);
+            Happiness = Math.Max (0, Happiness -1);
             Console.WriteLine($"Up and ready to Play! \n {Name}'s health is up! ");
         }
 
@@ -48,8 +48,8 @@
 
         public void PassTime()
         { 
-            Hunger=Math.Min(10, Hunger +2);
-            Happiness=Math.Max(1, Happiness -2);
+            Hunger=Math.Min(10, Hunger +1);
+            Happiness=Math.Max(1, Happiness -1);
         }
 
         public void CheckStats()
