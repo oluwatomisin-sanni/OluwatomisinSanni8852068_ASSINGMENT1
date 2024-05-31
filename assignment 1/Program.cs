@@ -91,14 +91,41 @@
             string petName = Console.ReadLine();    
             Pet myPet = new Pet(petType, petName);
 
-            Console.WriteLine($"Welcome, {myPet.Name} the {myPet.Type}!");
+            Console.WriteLine($"Welcome !,my name is {myPet.Name} the {myPet.Type}!");
 
             while(true)
             { 
                 myPet.SeeStats();
-                Console.WriteLine($"");
+                Console.WriteLine($"what should i do? \n Eat?, Play?, Rest?, Goodbye?");
+                string action=Console.ReadLine();
+
+                if (action=="goodbye")
+                {
+                    break;
+                }
+                switch (action)
+                {
+                    case "eat":
+                        myPet.Eat();  
+                        break;
+
+                    case "play":
+                        myPet.Play();
+                        break;
+
+                    case "rest":
+                        myPet.Rest();
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid option!\n Please choose from the options above :");
+                        break;
+                }
+                myPet.PassTime();
+                myPet.CheckStats();
             }
 
+            Console.WriteLine("Come back soon , OKAY?");
         }
     }
 }
