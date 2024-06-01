@@ -10,3 +10,7 @@ the user could let the pest rest, this will increase the health of the pet and d
 the user could ask to see the status of the pet, that would display the current values of the pet's hunger, happiness and health and recommend an action.
 there is also a cost for neglectining the pest, with each pass the health of the pet will reduce.
 the user can exit the game by saying "goodbye"
+
+
+Presentation link: 
+https://conestogac.zoom.us/rec/share/tMxsqjVYoAReuBZ7-7ewN710qBSTdJlAJAYH7KizgyuVM4dMj_8hH4nVIqcpgFk.32I6by8A_VbmTLd4?startTime=1717201524000
