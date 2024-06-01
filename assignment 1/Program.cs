@@ -45,7 +45,7 @@
         public void SeeStats()
         {
             Console.WriteLine($"{Name} the {Type}");
-            Console.WriteLine($"\n\nHUNGER: {Hunger}/10 \n\n HAPPINESS: {Happiness}/10 \n\n HEALTH: {Health}/10");
+            Console.WriteLine($"\n\nHUNGER: {Hunger}/10 \n\nHAPPINESS: {Happiness}/10 \n\nHEALTH: {Health}/10");
         }
 
         public void Neglect()
@@ -98,7 +98,7 @@
             while(true)//game loop control
             { 
                 myPet.SeeStats();
-                Console.WriteLine($"what should i do? \n Eat?, Play?, Rest?, Goodbye?");
+                Console.WriteLine($"what should i do? \n\n Eat?, Play?, Rest?, Goodbye?\nyou can also type'seestats' to check my overall health.");
                 string action=Console.ReadLine();
 
                 if (action=="goodbye")
@@ -119,8 +119,12 @@
                         myPet.Rest();
                         break;
 
+                    case "seestats":
+                        myPet.CheckStats();
+                        break;
+
                     default:
-                        Console.WriteLine("Invalid option!\n Please choose from the options above :");
+                        Console.WriteLine("Invalid option!\n Please choose from the options below :");
                         break;
                 }
                 myPet.Neglect();//calling the method created to simulate the passage of time
